@@ -1,7 +1,7 @@
 {
   "name": "esc-get-cmd-stdout-array-promise",
   "version": "0.1.0",
-  "description": "Runs the provided command and returns a promise that resolves with array of lines of stdout. onError can be empty to receive an empty array regardless of error, exit (process) else reject the promise.",
+  "description": "Runs the provided command and returns a promise that resolves with array of lines of stdout. onError can be 'empty' to receive an empty array regardless of error, 'exit' (process) else reject the promise.",
   "main": "main.mjs",
   "dependencies": {
   },
