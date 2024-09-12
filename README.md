@@ -5,19 +5,19 @@ Runs the provided command and returns a promise that resolves with array of line
 * No dependencies
 * Small, simple, easy to audit, yourself
 
-Inspired by
+## Install
+1. `npm install esc-get-cmd-stdout-array-promise`
 
+## Use
+```javascript
+import getCmdStdoutAP from 'esc-get-cmd-stdout-array-promise';
+import colors from 'colors'; // optional
 
-Read that readme before using this.
-
-## Installation - 2 minute setup
-
-1. `npm install -g esc-get-cmd-stdout-array-promise`
-
-
-## Notes
-
-
+( async () => {
+  const linesA = await getCmdStdoutAP('ls', { cwd:'/' }, colors);
+  console.log('linesA', linesA);
+})();
+```
 Have fun!
 
 ### Say thanks
