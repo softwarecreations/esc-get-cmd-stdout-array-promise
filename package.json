@@ -1,6 +1,6 @@
 {
   "name": "esc-get-cmd-stdout-array-promise",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Runs the provided command and returns a promise that resolves with array of lines of stdout. onError can be 'empty' to receive an empty array regardless of error, 'exit' (process) else reject the promise.",
   "main": "main.mjs",
   "dependencies": {
@@ -14,8 +14,24 @@
     "url": "git+https://github.com/softwarecreations/esc-get-cmd-stdout-array-promise.git"
   },
   "keywords": [
-    "minimal-dependencies",
-    "simple"
+    "no dependencies",
+    "simple",
+    "command execution",
+    "cli",
+    "promise",
+    "stdout",
+    "stdout array lines",
+    "error handling",
+    "small package",
+    "lightweight",
+    "script debugging",
+    "async/await",
+    "zx",
+    "zx alternative",
+    "command line interface",
+    "robust",
+    "MIT license",
+    "reliable"
   ],
   "author": "softwarecreations",
   "license": "MIT",
