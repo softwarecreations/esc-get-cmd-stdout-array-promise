@@ -8,7 +8,7 @@ const ownLine   = s => `\n${s}\n`;
 const noFmt     = s => s;
 const exitError = s => console.log(s) & process.exit(1);
 
-const getCmdStdoutAP = (cmd, options={}, fmtO={}) => new Promise( (resolveF, rejectF) => {
+export const getCmdStdoutAP = (cmd, options={}, fmtO={}) => new Promise( (resolveF, rejectF) => {
   execP(cmd, options)
   .then( ({ stdout }) => {
     stdout = stdout.trim();
