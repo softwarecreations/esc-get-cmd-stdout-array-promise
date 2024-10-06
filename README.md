@@ -1,9 +1,10 @@
 # esc-get-cmd-stdout-array-promise
 Runs the provided command and returns a promise that resolves with array of lines of stdout.
 
-## onError options - command that you run fails
+## onError options
+When the command that you run fails
 * `onError:[]` - You receive `[]`
-* `onError:'exit' - Exit the process
+* `onError:'exit'` - Exit the process
 * (default) - Promise rejects
 
 ## Inspiration
