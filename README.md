@@ -51,7 +51,9 @@ When the command that you run fails
 
 ![image](https://github.com/user-attachments/assets/97254530-aec5-43fa-a920-0ee769c1e07a)
 
-Now delete the file and try again
+```sh
+/tmp/foo$ rm fruit-selection.txt
+```
 
 ![image](https://github.com/user-attachments/assets/b6bb4354-639d-43fc-a1ce-b9552a774d0d)
 
