@@ -38,7 +38,7 @@ import colors from 'esc-colors'; // optional
   console.log('linesA', linesA);
 })();
 ```
-![image](https://github.com/user-attachments/assets/11ed9b9e-42bd-46d1-9c62-b79ecc7a849d)
+![image](https://github.com/user-attachments/assets/9d073807-fce1-411b-96c4-82e794fa8e38)
 
 ```JavaScript
   const linesA = await getCmdStdoutAP('ls -la', { cwd:'/tmp/foo' }, colors);
