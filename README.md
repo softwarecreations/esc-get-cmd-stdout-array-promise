@@ -22,7 +22,7 @@ If I have ideas for something different, I'll make a new package rather than mak
 
 ## Use
 I ran these commands in a terminal
-```bash
+```sh
 /$ mkdir /tmp/foo
 /$ cd /tmp/foo
 /tmp/foo$ touch file1.txt file2.zip file3.mp3
