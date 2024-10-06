@@ -11,7 +11,6 @@ I ran these commands in a terminal
 /$ cd /tmp/foo
 /tmp/foo$ touch file1.txt file2.zip file3.mp3
 /tmp/foo$ mkdir dir1 dir2
-/tmp/foo$ printf 'APPLE\nORANGE\n' > fruit-selection.txt
 ```
 
 ```javascript
@@ -33,6 +32,18 @@ import colors from 'esc-colors'; // optional
 
 Obviously `ls` isn't the best use for this module, but it's an example that anyone would be familiar with.
 
+## onError options
+When the command that you run fails
+* (default) - Promise rejects
+* `onError:'exit'` - Exit the process
+* `onError:'empty'` - You receive `[]`
+* `onError:[]` - You receive `[]`
+* `onError:['some','failsafe','output']` - You receive `['some','failsafe','output']`
+
+```sh
+/tmp/foo$ printf 'APPLE\nORANGE\n' > fruit-selection.txt
+```
+
 ```JavaScript
   const linesA = await getCmdStdoutAP('cat fruit-selection.txt', { cwd:'/tmp/foo', onError:['GRAPE'] }, colors);
   console.log('linesA', linesA);
@@ -43,14 +54,6 @@ Obviously `ls` isn't the best use for this module, but it's an example that anyo
 Now delete the file and try again
 
 ![image](https://github.com/user-attachments/assets/b6bb4354-639d-43fc-a1ce-b9552a774d0d)
-
-## onError options
-When the command that you run fails
-* (default) - Promise rejects
-* `onError:'exit'` - Exit the process
-* `onError:'empty'` - You receive `[]`
-* `onError:[]` - You receive `[]`
-* `onError:['some','failsafe','output']` - You receive `['some','failsafe','output']`
 
 ## Inspiration
 Initially I liked `zx` but found it a nightmare to debug scripts run with it when something went wrong.
