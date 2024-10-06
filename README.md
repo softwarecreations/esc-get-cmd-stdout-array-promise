@@ -21,15 +21,33 @@ If I have ideas for something different, I'll make a new package rather than mak
 1. `npm install esc-get-cmd-stdout-array-promise`
 
 ## Use
+I ran these commands in a terminal
+```bash
+/$ mkdir /tmp/foo
+/$ cd /tmp/foo
+/tmp/foo$ touch file1.txt file2.zip file3.mp3
+/tmp/foo$ mkdir dir1 dir2
+```
+
 ```javascript
 import getCmdStdoutAP from 'esc-get-cmd-stdout-array-promise';
-import colors from 'colors'; // optional
+import colors from 'esc-colors'; // optional
 
 ( async () => {
-  const linesA = await getCmdStdoutAP('ls', { cwd:'/' }, colors);
+  const linesA = await getCmdStdoutAP('ls', { cwd:'/tmp/foo' }, colors);
   console.log('linesA', linesA);
 })();
 ```
+![image](https://github.com/user-attachments/assets/11ed9b9e-42bd-46d1-9c62-b79ecc7a849d)
+
+```JavaScript
+  const linesA = await getCmdStdoutAP('ls -la', { cwd:'/tmp/foo' }, colors);
+  console.log('linesA', linesA);
+```
+![image](https://github.com/user-attachments/assets/558e9fab-4907-460e-bf4b-8d4dcffd488b)
+
+Obviously `ls` isn't the best use for this module, but it's an example that anyone would be familiar with.
+
 Have fun!
 
 ### Say thanks
