@@ -1,5 +1,10 @@
 # esc-get-cmd-stdout-array-promise
-Runs the provided command and returns a promise that resolves with array of lines of stdout. onError can be empty to receive an empty array regardless of error, exit (process) else reject the promise.
+Runs the provided command and returns a promise that resolves with array of lines of stdout.
+
+## onError options - command that you run fails
+* `onError:[]` - You receive `[]`
+* `onError:'exit' - Exit the process
+* (default) - Promise rejects
 
 ## Inspiration
 Initially I liked `zx` but found it a nightmare to debug scripts run with it when something went wrong.
