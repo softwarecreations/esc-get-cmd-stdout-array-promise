@@ -44,7 +44,7 @@ import colors from 'esc-colors'; // optional
   const linesA = await getCmdStdoutAP('ls -la', { cwd:'/tmp/foo' }, colors);
   console.log('linesA', linesA);
 ```
-![image](https://github.com/user-attachments/assets/558e9fab-4907-460e-bf4b-8d4dcffd488b)
+![image](https://github.com/user-attachments/assets/fd69a062-c235-4315-b628-5a5574790d69)
 
 Obviously `ls` isn't the best use for this module, but it's an example that anyone would be familiar with.
 
