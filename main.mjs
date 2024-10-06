@@ -29,7 +29,7 @@ export const getCmdStdoutAP = (cmd, options={}, fmtO={}) => new Promise( (resolv
         ].filter(Boolean);
         return exitError(errMsgA.join('\n'));
       default:
-        return rejectF(err);
+        return Array.isArray(options.onError) ? resolveF(options.onError) : rejectF(err);
     }
   });
 });

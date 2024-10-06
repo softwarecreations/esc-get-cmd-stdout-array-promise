@@ -13,7 +13,7 @@ declare module 'esc-get-cmd-stdout-array-promise' {
     windowsHide?: boolean;           // Hide subprocess console window on Windows
   }
 
-  type OnError = 'empty' | 'exit' | 'default';
+  type OnError = 'empty' | 'exit' | 'default' | any[];
 
   export function getCmdStdoutAP(cmd: string, options?: ExecOptions, onError?: OnError): Promise<string[]>;
 

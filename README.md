@@ -3,9 +3,11 @@ Runs the provided command and returns a promise that resolves with array of line
 
 ## onError options
 When the command that you run fails
-* `onError:[]` - You receive `[]`
-* `onError:'exit'` - Exit the process
 * (default) - Promise rejects
+* `onError:'exit'` - Exit the process
+* `onError:'empty'` - You receive `[]`
+* `onError:[]` - You receive `[]`
+* `onError:['some','failsafe','output']` - You receive `['some','failsafe','output']`
 
 ## Inspiration
 Initially I liked `zx` but found it a nightmare to debug scripts run with it when something went wrong.
@@ -33,6 +35,7 @@ I ran these commands in a terminal
 /$ cd /tmp/foo
 /tmp/foo$ touch file1.txt file2.zip file3.mp3
 /tmp/foo$ mkdir dir1 dir2
+/tmp/foo$ printf 
 ```
 
 ```javascript
