@@ -1,5 +1,17 @@
 # esc-get-cmd-stdout-array-promise
-Runs the provided command and returns a promise that resolves with array of lines of stdout.
+
+Runs the provided command and returns a promise that resolves with array of lines of stdout when the command is finished.
+
+## My other NPM modules for running commands with real-time output
+
+### Interactive (run and use nano/vim/installers/htop etc)
+
+[esc-get-interactive-cmd-result-async](https://www.npmjs.com/package/esc-get-interactive-cmd-result-async)
+
+### Capture std out/err with optional capture/filtering, error handling, live output passthru
+
+[esc-get-cmd-data-passthru-async](https://www.npmjs.com/package/esc-get-cmd-data-passthru-async)
+
 
 ## Install
 `npm install esc-get-cmd-stdout-array-promise`
