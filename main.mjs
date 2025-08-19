@@ -19,7 +19,7 @@ export const getCmdStdoutAP = (cmd, options={}, fmtO={}) => new Promise( (resolv
     switch (options.onError) {
       case 'empty':
         return resolveF([]);
-      case 'exit' :
+      case 'exit' : {
         const { magenta, blue, white, red } = fmtO;
         const errMsgA = [
                     `Command ${   (fmtO.cmd    ?? magenta ?? ownLine)(cmd   )} failed with code ${
@@ -28,6 +28,7 @@ export const getCmdStdoutAP = (cmd, options={}, fmtO={}) => new Promise( (resolv
                     'stderr:\n' + (fmtO.stderr ?? red     ?? noFmt  )(stderr),
         ].filter(Boolean);
         return exitError(errMsgA.join('\n'));
+      }
       default:
         return Array.isArray(options.onError) ? resolveF(options.onError) : rejectF(err);
     }
